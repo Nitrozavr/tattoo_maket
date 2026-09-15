@@ -1,0 +1,809 @@
+@import url('../css/fonts.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+
+:root {
+    --main-color-br:#a7553c;
+    --main-color-gr:#e5e5e5;
+    --main-color-wh:#ffffff;
+    --main-color-bl:#424242;
+}
+
+body {
+    background-color: var(--main-color-wh);
+    color: #ffffff;
+}
+
+p {
+    cursor: context-menu;
+}
+
+.p_pointer {
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.a_link {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300))) !important;
+}
+
+.st0 {
+    fill: var(--main-color-br) !important;
+}
+
+.gap-10 {
+    gap:10px;
+}
+
+.gap-15 {
+    gap:15px;
+}
+
+.gap-30 {
+    gap:30px;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex-row {
+    flex-direction:row;
+}
+
+.d-flex-col {
+    flex-direction:column;
+}
+
+.d-flex_al-it-center {
+    align-items: center;
+}
+
+.mx-5 {
+    margin: 0 5%;
+}
+
+.px-5 {
+    padding: 5% 0;
+}
+
+.textHeader1 {
+    font-size: calc(28px + (48 - 28) * ((100vw - 300px) / (1920 - 300)));
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'Playfair-Display-VariableFont', sans-serif;
+}
+
+.textHeader2 {
+    font-size: calc(28px + (40 - 28) * ((100vw - 300px) / (1920 - 300)));
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'Playfair-Display-VariableFont', sans-serif;
+}
+
+.textHeader_btn {
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1920 - 300)));
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.textMain {
+    font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1920 - 300)));
+    line-height: calc(20px + (28 - 20) * ((100vw - 300px) / (1920 - 300)));
+    letter-spacing: 1px;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+.header {
+    background-color: var(--main-color-br);
+    position: sticky;
+    z-index: 100;
+    top: 0px;
+}
+
+.mainBlock {
+    background-color: var(--main-color-br);
+    height: 100vh;
+}
+
+.mainBlock__blockup {
+    background-color: var(--main-color-br);
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mainBlock__blockdown {
+    background-color: var(--main-color-wh);
+    height: 40vh
+}
+
+.mainText_block {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    width: calc(35vw + (35 - 35) * ((100vw - 300px) / (1920 - 300)));
+    z-index: 50;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainText_block__textMain {
+    font-size: 120px;
+    font-size: calc(32px + (120 - 32) * ((100vw - 300px) / (1920 - 300)));
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-family: 'Playfair-Display-VariableFont', sans-serif;
+}
+
+.mainText_block__textMain__Name {
+    margin-top:calc(1px + (60 - 1) * ((100vw - 300px) / (1920 - 300)));
+    margin-left:calc(1px + (160 - 1) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.mainText_block__textMain__LName {
+    margin-bottom: calc(1px + (60 - 1) * ((100vw - 300px) / (1920 - 300)));
+    margin-left:calc(1px + (160 - 1) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.mainText_block__textAdd {
+    font-size: 24px;
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
+    letter-spacing: 6px;
+    margin-top:calc(1px + (30 - 1) * ((100vw - 300px) / (1920 - 300)));
+    margin-left:calc(1px + (180 - 1) * ((100vw - 300px) / (1920 - 300)));
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 100;
+}
+
+.mainText_block__absolute {
+    position: absolute;
+    z-index: 1;
+}
+
+.mainImg_block {
+    position: relative;
+    width: 55vw;
+    width: calc(65vw + (95 - 65) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.mainImg_block__absolute {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.mainImg_block__img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: 10% 25%;
+}
+
+.workBlock {
+    background-color: var(--main-color-wh);
+    /* height: calc(550px + (850 - 550) * ((100vw - 300px) / (1920 - 300))); */
+    position: relative;
+}
+
+.workBlock_main__BlockText {
+    background-color: var(--main-color-wh);
+    color: var(--main-color-br);
+    padding-bottom: 2%;
+}
+
+.workBlock_main__BlockMain {
+    background-color: var(--main-color-gr);
+    width:100%;
+}
+
+.workBlock_main__BlockMain__BlockPicture{
+    width: 50vw;
+}
+
+.workBlock_main__BlockMain .picture {
+    width: 100%;
+    min-height: 450px;
+    height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.workBlock_main__BlockMain__BlockText {
+    width: 50vw;
+    justify-content: center;
+    padding: 0 calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+    gap:calc(15px + (25 - 15) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.workBlock_border {
+    width: 8%;
+    display: block;
+    height: 2px;
+    background: var(--main-color-br);
+}
+
+.workBlock__textH2 {
+    color: var(--main-color-br);
+    text-transform: none !important;
+}
+
+.workBlock__text {
+    color: var(--main-color-bl);
+}
+
+
+.workBlock_main__BlockPicture {
+    background-color: var(--main-color-wh);
+}
+
+.workBlock_main__BlockPicture__BlockGrid {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 2em;
+    column-gap: 2em;
+}
+
+.workBlock_main__BlockPicture__BlockGrid img {
+    cursor: pointer;
+}
+
+.gridBlock {
+    background-color: var(--main-color-wh);
+}
+
+.slider-container {
+    display: none;
+    padding: 5%;
+}
+
+.slick-dots {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+.slick-prev {
+    left: 5px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 5px;
+    z-index: 1;
+}
+
+.slick-dots li {
+    margin: 0;
+}
+
+.slick-dots {
+    bottom: 0px;
+    position: relative;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slick-dots li button:before {
+    content: url(../svg/line.svg);
+    color: #a7553c !important;
+}
+
+.fade-in {
+    opacity: 0;
+    -webkit-animation-duration: calc(1s * 2);
+    animation-duration: calc(1s * 2);
+    -webkit-animation-duration: calc(var(--animate-duration) * 2);
+    animation-duration: calc(var(--animate-duration) * 2);
+    animation: fadeInAnimation 1.5s ease forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.gridBlock_picture__slider {
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.gridBlock_picture {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.workBlock_main__BlockBtn {
+    background-color: var(--main-color-wh);
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workBlock_main__BlockBtn__button {
+    background: var(--main-color-br);
+    padding: 20px 60px;
+    color: var(--main-color-wh);
+    /* border-color: darkmagenta; */
+    border: none;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+.workBlock_main__BlockBtn__button:hover {
+    background: var(--main-color-bl);
+    color: var(--main-color-wh);
+    /* border-color: darkmagenta; */
+    border: none;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.aboutmeBlock {
+    background-color: var(--main-color-wh);
+    position: relative;
+    width: 100%;
+}
+
+.aboutmeBlockup {
+    background-color: var(--main-color-br);
+    position: relative;
+    gap: calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.aboutmeBlockdown {
+        background-color: var(--main-color-wh);
+        height: 200px;
+        width: 100%;
+}
+
+.aboutmeBlock_Block__BlockText {
+    width:55vw;
+    padding: 5%;
+    justify-content: flex-start;
+    gap:calc(15px + (25 - 15) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.aboutmeBlock__textH2 {
+    color: var(--main-color-wh);
+    text-transform: none !important;
+}
+
+.aboutmeBlock__text {
+    color: var(--main-color-wh);
+}
+
+.aboutmeBlock_border {
+    width: 8%;
+    display: block;
+    height: 2px;
+    background: var(--main-color-wh);
+}
+
+.aboutmeBlock_Block__BlockImg {
+    width:45vw;
+    position: relative;
+}
+
+.aboutmeBlock_Block__BlockImg__absolute {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding-top: 10%;
+    padding-right: 10%;
+
+}
+
+.aboutmeBlock_Block__img {
+    width: 100%;
+    height: 90vh;
+    min-height: 550px;
+    max-height: 730px;
+    object-fit: cover;
+    object-position: 10% 25%;
+}
+
+.priceBlock {
+    background-color: var(--main-color-wh);
+    position: relative;
+}
+
+.priceBlock__btn {
+    padding: 20px 60px;
+    width: fit-content;
+    background: var(--main-color-br);
+    color: var(--main-color-wh);
+    border: 1px solid var(--main-color-wh);
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+    font-family: 'Roboto-Regular', sans-serif;
+}
+
+.priceBlock__btn:hover {
+    background: var(--main-color-bl);
+    color: var(--main-color-wh);
+    border: 1px solid var(--main-color-bl);
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.priceBlock_main__BlockText {
+    background-color: var(--main-color-wh);
+    color: var(--main-color-br);
+    padding-bottom: 2%;
+}
+
+.priceBlock__text {
+    color: var(--main-color-wh);
+}
+
+.priceBlock_main__BlockMain {
+    background-color: var(--main-color-br);
+    width:100%;
+}
+
+.priceBlock_main__BlockMain__BlockPicture{
+    width: 40vw;
+}
+
+.priceBlock_main__BlockMain__picture {
+    width: 100%;
+    min-height: 550px;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.priceBlock_main__BlockMain__BlockText {
+    width: 60vw;
+    justify-content: center;
+    padding-left: calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+    padding-right: calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+    padding-top: calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+    padding-bottom: calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+    gap:calc(15px + (25 - 15) * ((100vw - 300px) / (1920 - 300)));
+}
+
+.priceBlock_border {
+    width: 8%;
+    display: block;
+    height: 2px;
+    background: var(--main-color-wh);
+}
+
+.priceBlock__textH2 {
+    color: var(--main-color-wh);
+    text-transform: none !important;
+}
+
+.reviewsBlock {
+    background-color: var(--main-color-wh);
+    display: none;
+    height: 200px;
+    padding: 20px;
+    position: relative;
+}
+
+.contactsBlock__BlockText {
+    background-color: var(--main-color-wh);
+    color: var(--main-color-br);
+    padding-bottom: 2%;
+    padding-top: calc(5% + 50px);
+}
+
+.contactsBlock__mainBlock {
+    background-color: var(--main-color-gr);
+}
+
+.contactsBlock {
+    background-color: var(--main-color-wh);
+    position: relative;
+}
+
+.contactsBlock_maps {
+    width: 50vw;
+    min-height: 550px;
+    height: 40vh;
+}
+
+.contactsBlock_BlockText {
+    width: 50vw;
+}
+
+.contactsBlock_border {
+    width: 8%;
+    display: block;
+    height: 2px;
+    background: var(--main-color-br);
+}
+
+.contactsBlock__textH2 {
+    color: var(--main-color-br);
+    text-transform: none !important;
+}
+
+.contactsBlock_maps__mainBlock {
+    width: 100%;
+}
+
+.contactsBlock_BlockText {
+    padding-left: calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+    padding-right: calc(10px + (100 - 10) * ((100vw - 300px) / (1920 - 300)));
+    gap:calc(15px + (25 - 15) * ((100vw - 300px) / (1920 - 300)));
+    width: 60vw;
+    justify-content: center;
+}
+
+
+
+.contactsBlock_BlockText svg {
+    fill:var(--main-color-br);
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.contactsBlock_BlockText .contactsBlock__BlockSvg svg:hover {
+    fill:var(--main-color-bl);
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.contactsBlock__Text  {
+    color:var(--main-color-bl)
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
+
+.ymaps-2-1-79-image svg {
+    fill:var(--main-color-br)
+}
+
+.feedbackBlock {
+    background-color:  var(--main-color-wh);
+    height: 200px;
+    padding: 20px;
+    position: relative;
+}
+
+.footer {
+    background-color: var(--main-color-gr);
+    height: 25px;
+    position: relative;
+}
+
+@media screen and (max-width:1400px) {
+    .workBlock_main__BlockPicture__BlockGrid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    }
+    
+}
+
+@media screen and (max-width:850px) {
+    .workBlock_main__BlockPicture__BlockGrid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+    .gridBlock_picture {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:700px) {
+
+    .workBlock_main__BlockText {
+        margin-top: calc(5% + 50px)
+    }
+        
+    .mainBlock {
+        height: 95vh;
+    }
+
+    .mainText_block {
+        width: 16%;
+    }
+
+    .mainImg_block {
+        width: 95vw;
+    }
+
+    .mainBlock .mx-5 {
+        margin: 0;
+    }
+
+    .mainBlock__blockup {
+        height: 95vh;
+    }
+
+    .mainBlock__blockdown {
+        height: 0px;
+    }
+
+    .mainText_block__textMain__Name {
+        margin-top:0;
+        margin-left:5%;
+    }
+    
+    .mainText_block__textMain__LName {
+        margin-bottom: 0;
+        margin-left:5%;
+    }
+
+    .mainImg_block__img {
+        width: 100%;
+        height: 95vh;
+        object-fit: cover;
+        object-position: 45% 25%
+    }
+
+    .mainText_block__textMain {
+        font-size: calc(32px + (96 - 32) * ((100vw - 300px) / (700 - 300)));
+    }
+    
+    .mainText_block__textAdd {
+        font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (700 - 300)));
+        margin-top:calc(5% + (30 - 5) * ((100vw - 300px) / (700 - 300)));
+        margin-left: 7%;
+    }
+
+    .mainText_block {
+        justify-content: center;
+    }
+
+    .workBlock_main__BlockMain {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .workBlock_main__BlockMain__BlockPicture {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .workBlock_main__BlockMain .picture {
+        min-height: 250px;
+        height: 75vh;
+        max-height: 300px;
+    }
+
+    .workBlock_main__BlockMain__BlockText {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .aboutmeBlockup {
+        flex-direction: column-reverse;
+        gap:0px;
+    }
+
+    .aboutmeBlock_Block__BlockImg {
+        width: 100%;
+    }
+
+    .aboutmeBlockdown {
+        height: 0px;
+    }
+
+    .aboutmeBlock_Block__BlockImg__absolute {
+        position: relative;
+        padding: 0%;
+    }
+
+    .aboutmeBlock_Block__img {
+        min-height: 250px;
+        height: 75vh;
+        max-height: 450px;
+        padding: 5%;
+    }
+
+    .aboutmeBlock_Block__BlockText {
+        width: 100%;
+        padding: 5%;
+    }
+
+
+    .slider-container {
+        display: block;
+    }
+
+    .workBlock_main__mainPicture {
+        display: none;
+    }
+
+    .priceBlock_main__BlockMain {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .priceBlock_main__BlockMain__BlockPicture {
+        width: 100%;
+    }
+
+    .priceBlock_main__BlockText {
+        margin-top: calc(5% + 50px)
+    }
+
+    .priceBlock_main__BlockMain__picture {
+        min-height: 250px;
+        height: 75vh;
+        max-height: 450px;
+        padding: 5%;
+    }
+    .priceBlock_main__BlockMain__BlockText {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .contactsBlock__mainBlock {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contactsBlock_BlockText {
+        width: 100%;
+    }
+
+    .contactsBlock_maps {
+        width: 100%;
+        min-height: 350px;
+        height: 70vh;
+    }
+
+    .contactsBlock__BlockSvg {
+        align-items: center;
+        text-align: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contactsBlock_BlockText {
+        padding: 15% 5%;
+        gap: calc(20px + (40 - 20) * ((100vw - 300px) / (700 - 300)));
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .aboutmeBlock_Block__img {
+        min-height: 250px;
+        height: 75vh;
+        max-height: 300px;
+    }
+}

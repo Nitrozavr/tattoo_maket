@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Playfair-Display-VariableFont';
+    src: url('../fonts/playfair_display-font/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/roboto-font/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
